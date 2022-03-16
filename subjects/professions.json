@@ -1,24 +1,49 @@
 {
-  "information security": [],
+  "semester-1-subjects": {
 
-  "information technology": [],
+    "information security": [],
 
-  "computer science": [],
+    "information technology": [],
+    
+    "computer science": [],
 
-  "software engineering": [
+    "software engineering": [
 
-    "communication skills",
-    "general physics",
-    "sudanese studies",
-    "descrete math",
-    "differentiation",
-    "english",
-    "introduction to computer science",
-    "computer skills basics"
+      "communication skills",
+      "general physics",
+      "sudanese studies",
+      "descrete math",
+      "differentiation",
+      "english",
+      "introduction to computer science",
+      "computer skills basics"
 
-  ],
+    ],
 
-  "network systems": [],
-  
-  "information systems": []
+    "network systems": [],
+
+    "information systems": []
+  },
+
+  "semester-2-subjects":{
+
+    "information security": [],
+
+    "information technology": [],
+
+    "computer science": [],
+
+    "software engineering": [
+      "Accounting and SpreadSheets",
+      "Lab Programming Basics",
+      "computer skills basics",
+      "Knowledge Management",
+      "Programming Baiscs"
+    ],
+
+    "network systems": [],
+
+    "information systems": []
+
+  }
 }
