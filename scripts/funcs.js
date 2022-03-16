@@ -57,12 +57,12 @@ function hideLoading() {
 
 //
 
-activeSemester = "semester-1-subjects";
+activeSemester = "semester-2-subjects";
 
 function showSubs() {
     let index = $('.profession').selectedIndex;
     let pro_name = $('.profession').children[index].getAttribute('name');
-    let available_subs = maps["professions"][pro_name];
+    let available_subs = maps["professions"][activeSemester][pro_name];
 
     let sub_elem_out = "";
     for (let sub_name of available_subs) {
@@ -107,7 +107,7 @@ function appendFiles(semester, subname) {
         name = name.join('');
 
         let timeID = Math.random();
-        let link = `subjects/semester-1-subjects/${subname}/${file}`;
+        let link = `subjects/${activeSemester}/${subname}/${file}`;
         //?random to pass the cache
 
         out += `<a href="${link}" download target="_blank" class="file">
