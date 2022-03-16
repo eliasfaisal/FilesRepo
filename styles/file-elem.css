@@ -1,0 +1,64 @@
+/*
+    Created: 18 Feb 2022
+    by @EliasFaisal82 (fb)
+*/
+.file {
+    width: -webkit-fill-available;
+    height: 70px;
+    background: #1e293b;
+    color: #ffffffba;
+    border-radius: 6px;
+    border: solid 2px #2a374b;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+.file:hover {
+    background: #243146;
+    border: solid 2px #384963;
+}
+
+.file-title {
+    width: -webkit-fill-available;
+    height: fit-content;
+    text-align: right;
+    margin: 10px 20px;
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dnd-icon {
+    width: 17px;
+    height: 17px;
+    background-image: url('../assets/download.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+.title-sep {
+    width: 20%;
+    height: 1px;
+    background: #fffc;
+    margin: 0 18px 0 auto;
+}
+
+/*-------*/
+.details {
+    display: flex;
+    width: fit-content;
+    height: -webkit-fill-available;
+    margin: auto 20px auto auto;
+    gap: 15px;
+}
+
+.details>div {
+    height: fit-content;
+    margin: auto;
+}
+
+.size,.ext {
+    direction: rtl;
+}

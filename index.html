@@ -1,0 +1,84 @@
+<!-- 
+    Created: 18 Feb 2022
+    by @EliasFaisal82 (fb)
+ -->
+<html>
+    <head>
+        <title>أرشيف الملفات</title>
+        <link preload rel="icon" href="icon.png">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+        <link preload rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Almarai"/>
+        <!-- styles -->
+        <link preload rel="stylesheet" href="styles/main.css"/>
+        <link preload rel="stylesheet" href="styles/controls.css"/>
+        <link preload rel="stylesheet" href="styles/file-elem.css"/>
+        <!-- OG -->
+        <meta property="og:title" content="أرشيف الملفات | كلية علوم الحاسوب و تقنية المعلومات">
+        <meta property="og:url" content="https://csitkarary.github.io/archive">
+        <meta property="og:description" content="أرشيف المقرر لكلية علوم الحاسوب الدفعة 11 | جامعة كرري">
+    </head>
+    <body style="overflow:hidden;">
+        <div id="loading_widget">
+            <div id="loading_holder">
+                <div>
+                    <div class="loading_brain"></div>
+                </div>
+                <div>
+                    <div class="digit">1</div>
+                    <div class="digit">1</div>
+                    <div class="digit">0</div>
+                    <div class="digit">0</div>
+                    <div class="digit">1</div>
+                    <div class="digit">0</div>
+                    <div class="digit">1</div>
+                    <div class="digit">1</div>
+                    <div class="digit">0</div>
+                    <div class="digit">1</div>
+                    <div class="digit">1</div>
+                    <div class="digit">0</div>
+                </div>
+            </div>
+        </div>
+        <!--      -->
+        <main style="transform:scale(0.9);opacity:0;">
+            <div class="bar">
+                <div>
+                    <div class="basmalla"></div>
+                </div>
+                <div>
+                    <div class="bar-title">أرشيف الملفات</div>
+                    <div class="brain-icon"></div>
+                </div>
+            </div>
+            <div class="main-container">
+                <div class="holder">
+                    <div class="options">
+                        <div class="semester-container">
+                            <div name="semester-1-subjects" class="semester-1">Semester 1</div>
+                            <div name="semester-2-subjects" class="semester-2 disabled">Semester 2</div>
+                        </div>
+                        <select class="profession">
+                            <option default>التخصص</option>
+                            <option name="information security">أمن المعلومات</option>
+                            <option name="information technology">تقنية المعلومات</option>
+                            <option name="computer science">علوم الحاسوب</option>
+                            <option name="software engineering">هندسة البرمجيات</option>
+                            <option name="network systems">نظم الشبكات</option>
+                            <option name="information systems">نظم المعلومات</option>
+                        </select>
+                        <select disabled class="subjects">
+                            <option default>المادة</option>
+                        </select>
+                    </div>
+                    <div class="serparator"></div>
+                    <div class="files"></div>
+                </div>
+            </div>
+            <!-- scripts -->
+            <script preload src="scripts/presets.js"></script>
+            <script preload src="scripts/funcs.js"></script>
+            <script defer src="scripts/script.js"></script>
+        </main>
+    </body>
+</html>

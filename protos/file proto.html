@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                font-family: Almarai;
+                font-size: 16px;
+                /*                 color: #fff; */
+                user-select: none;
+                -webkit-user-drag: none;
+                -webkit-tap-highlight-color: transparent;
+                /* firefox */
+                -moz-user-select: none;
+            }
+
+            body {
+                background-color: #0f172a;
+                margin: 0;
+            }
+
+            /*-----------*/
+            .file {
+                width: 446px;
+                height: 80px;
+                background: #1e293b;
+                color: #ffffffba;
+                border-radius: 6px;
+                border: solid 2px #2a374b;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .file:hover {
+                background: #243146;
+                border: solid 2px #384963;
+            }
+
+            .file-title {
+                width: -webkit-fill-available;
+                height: fit-content;
+                text-align: right;
+                margin: 10px 20px;
+                font-size: large;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .dnd-icon {
+                width: 17px;
+                height: 17px;
+                background-image: url('../assets/download.svg');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .title-sep {
+                width: 20%;
+                height: 1px;
+                background: #fffc;
+                margin: 0 18px 0 auto;
+            }
+
+            /*-------*/
+            .details {
+                display: flex;
+                width: fit-content;
+                height: -webkit-fill-available;
+                margin: auto 20px auto auto;
+                gap: 15px;
+            }
+
+            .details>div {
+                height: fit-content;
+                margin: auto;
+            }
+
+            .size,.ext {
+                direction: rtl;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="file">
+            <div class="file-title">
+                <div class="dnd-icon"></div>
+                <div>محاضرة 1</div>
+            </div>
+            <div class="title-sep"></div>
+            <div class="details">
+                <div class="size">الحجم الكلي : 71MB</div>
+                <div class="ext">الصيغة : PPTX</div>
+            </div>
+        </div>
+    </body>
+</html>

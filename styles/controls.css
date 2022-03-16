@@ -1,0 +1,94 @@
+/*
+    Created: 18 Feb 2022
+    by @EliasFaisal82 (fb)
+*/
+.main-container {
+    width: -webkit-fill-available;
+    /*height is calculated*/
+    display: flex;
+    justify-content: center;
+}
+
+.holder {
+    max-width: 450px;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.options {
+}
+
+.semester-container {
+    display: flex;
+    justify-content: center;
+}
+
+/*buttons */
+.semester-container>div.disabled {
+    color: #ffffff40;
+}
+
+.semester-container>div {
+    background: #1e293b;
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 30px;
+    border-radius: 7px;
+    border: solid 2px #2a374b;
+    font-size: small;
+    color: #ffffffb3;
+}
+
+.semester-container>div:hover {
+    background: #243146;
+    border: solid 2px #384963;
+}
+
+.semester-1 {
+    margin: 0 2.5px 0 0;
+}
+
+.semester-2 {
+    margin: 0 0 0 2.5px;
+}
+
+.subjects,.profession {
+    background: #1e293b;
+    width: -webkit-fill-available;
+    margin: 5px 0;
+    text-align: center;
+    direction: rtl;
+    height: 34px;
+    color: #ffffffb3;
+    border-radius: 6px;
+    border: solid 2px #2a374b;
+    font-size: small;
+}
+
+.subjects {
+    margin: 0px auto 5px auto;
+}
+
+/*end of buttons */
+/*-------*/
+.serparator {
+    width: 40%;
+    height: 1px;
+    background: #fffc;
+    border-radius: 60px;
+    margin: 7.5px auto 10px auto;
+}
+
+.files {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    overflow-y: auto;
+}
+
+/*-------*/
