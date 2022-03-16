@@ -9,7 +9,7 @@ function loadMaps() {
     //
     for (let e of f) {
         let reg = new XMLHttpRequest;
-        reg.open('get', 'subjects/' + e + ".json");
+        reg.open('get', `subjects/${e}.json?r=${Math.random()}`);
         reg.nnn = e;
         reg.onload = (e)=>{
             window.maps[e.target.nnn] = JSON.parse(e.target.responseText);
