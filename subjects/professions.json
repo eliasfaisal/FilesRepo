@@ -27,23 +27,63 @@
 
   "semester-2-subjects":{
 
-    "information security": [],
+    "information security": [
+      "Lab Programming Basics",
+      "computer skills basics",
+      "Knowledge Management",
+      "Programming Baiscs",
+      "English"
 
-    "information technology": [],
+    ],
 
-    "computer science": [],
+    "information technology": [
+      "Accounting and SpreadSheets",
+      "Lab Programming Basics",
+      "computer skills basics",
+      "Knowledge Management",
+      "Programming Baiscs",
+      "English"
+
+    ],
+
+    "computer science": [
+      "Accounting and SpreadSheets",
+      "Lab Programming Basics",
+      "computer skills basics",
+      "Knowledge Management",
+      "Programming Baiscs",
+      "English"
+
+    ],
 
     "software engineering": [
       "Accounting and SpreadSheets",
       "Lab Programming Basics",
       "computer skills basics",
       "Knowledge Management",
-      "Programming Baiscs"
+      "Programming Baiscs",
+      "English"
+
     ],
 
-    "network systems": [],
+    "network systems": [
+      "Accounting and SpreadSheets",
+      "Lab Programming Basics",
+      "computer skills basics",
+      "Knowledge Management",
+      "Programming Baiscs",
+      "English"
 
-    "information systems": []
+    ],
+
+    "information systems": [
+      "Accounting and SpreadSheets",
+      "Lab Programming Basics",
+      "computer skills basics",
+      "Programming Baiscs",
+      "English"
+
+    ]
 
   }
 }
