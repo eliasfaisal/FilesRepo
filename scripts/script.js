@@ -24,7 +24,11 @@ loading_ani();
 ["semester-1", "semester-2"].forEach((e)=>{
     $("." + e).onclick = (ee)=>{
         let me = ee.target;
-        activeSemester = me.getAttribute('name');
+        let attrib = me.getAttribute('name');
+        if (attrib == activeSemester) {
+            return !1;
+        }
+        activeSemester = attrib;
         me.classList.remove("disabled");
         if (me.className.includes("semester-1")) {
             $('.semester-2').classList.add('disabled');
