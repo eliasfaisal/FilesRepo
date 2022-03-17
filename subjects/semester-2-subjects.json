@@ -46,5 +46,28 @@
       "الشيت اﻷول.pdf",
       "الشيت الثاني.pdf"
     ]
+  },
+  "Comp Env and Tools": {
+    "name": "بيئة و معدات الحاسوب",
+    "files": [
+      "01_Introduction.ppt",
+      "02_Computer_Evolution_and_Performance.ppt",
+      "03_Buses.ppt",
+      "04_Cache Memory.ppt",
+      "05_Internal Memory.ppt",
+      "06_External Memory.ppt",
+      "07_Input Output.ppt",
+      "08_Operating System Support.ppt",
+      "09_Arithmetic.ppt",
+      "10_Instruction Sets characteristics.ppt",
+      "11_ Instruction Sets addressing modes .ppt",
+      "12_Processor Structure and Function.ppt",
+      "13_RISC.ppt",
+      "14_Superscalar.ppt",
+      "15_IA64.ppt",
+      "16_Control Unit.ppt",
+      "17_Micro-Programmed Control.ppt",
+      "18_Parallel Processing.ppt"
+    ]
   }
 }
