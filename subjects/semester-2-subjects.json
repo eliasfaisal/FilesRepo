@@ -69,5 +69,11 @@
       "17_Micro-Programmed Control.ppt",
       "18_Parallel Processing.ppt"
     ]
+  },
+  "Intro to Number Theory": {
+    "name": "نظرية اﻷعداد",
+    "files": [
+      "مقدمة نظرية اﻷعداد.pdf"
+    ]
   }
 }
