@@ -49,6 +49,7 @@ function hideLoading() {
         $("#loading_widget").style.display = "none";
         setTimeout(()=>{
             $('body').removeAttribute('style');
+            clearInterval(loading_ani_interval);
         }
         , 100);
     }

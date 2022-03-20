@@ -16,7 +16,7 @@ onload = ()=>{
     hideLoading();
 }
 
-loading_ani();
+var loading_ani_interval = setInterval(loading_ani, 250);
 
 //assigning events
 

@@ -7,6 +7,8 @@
     /*height is calculated*/
     display: flex;
     justify-content: center;
+    /* firefox */
+    width: -moz-available;
 }
 
 .holder {
@@ -16,6 +18,8 @@
     margin: 10px;
     display: flex;
     flex-direction: column;
+    /* firefox */
+    width: -moz-available;
 }
 
 .options {
@@ -43,6 +47,8 @@
     border: solid 2px #2a374b;
     font-size: small;
     color: #ffffffb3;
+    /* firefox */
+    width: -moz-available;
 }
 
 .semester-container>div:hover {
@@ -69,6 +75,8 @@
     border-radius: 6px;
     border: solid 2px #2a374b;
     font-size: small;
+    /* firefox */
+    width: -moz-available;
 }
 
 .subjects {
@@ -89,6 +97,9 @@
     width: -webkit-fill-available;
     height: -webkit-fill-available;
     overflow-y: auto;
+    /* firefox */
+    width: -moz-available;
+    height: -moz-available;
 }
 
 /*-------*/
