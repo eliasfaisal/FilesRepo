@@ -1,14 +1,20 @@
 {
   "semester-1-subjects": {
 
-    "information security": [],
+    "information security": [
+      "exams"
+    ],
 
-    "information technology": [],
+    "information technology": [
+      "exams"
+    ],
     
-    "computer science": [],
+    "computer science": [
+      "exams"
+    ],
 
     "software engineering": [
-
+      "exams",
       "communication skills",
       "general physics",
       "sudanese studies",
@@ -18,9 +24,13 @@
 
     ],
 
-    "network systems": [],
+    "network systems": [
+      "exams"
+    ],
 
-    "information systems": []
+    "information systems": [
+      "exams"
+    ]
   },
 
   "semester-2-subjects":{

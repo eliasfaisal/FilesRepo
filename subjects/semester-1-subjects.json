@@ -1,4 +1,9 @@
 {
+  "exams": {
+    "name" : "-- إمتحانات --",
+    "files": []
+  },
+
   "communication skills": {
     "name": "مهارات الإتصال",
     "files": [
