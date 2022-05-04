@@ -141,3 +141,21 @@ body {
     font-family: monospace;
     margin: auto 5px;
 }
+
+#msg {
+    color: #fff;
+    width: 240px;
+    height: 30px;
+    position: fixed;
+    padding: 30px 50px;
+    background: #fff2;
+    border-radius: 5px;
+    direction: rtl;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0;
+    transition: 300ms;
+}

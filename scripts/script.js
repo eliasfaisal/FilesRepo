@@ -62,6 +62,9 @@ $(".subjects").onchange = (e)=>{
     if (me.selectedIndex == 0) {
         $('.files').innerHTML = "";
         return 0;
+    } else if (me.children[me.selectedIndex].innerHTML == "-- إمتحانات --") {
+        showMsg();
+        return false;
     }
     let subname = me.children[me.selectedIndex].getAttribute("name");
     appendFiles(activeSemester, subname);

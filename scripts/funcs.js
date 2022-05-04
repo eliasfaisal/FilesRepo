@@ -127,3 +127,22 @@ function appendFiles(semester, subname) {
     }
     $(".files").innerHTML = out;
 }
+
+//
+
+function showMsg(ms=3000) {
+    $("#msg").style.display = "block";
+    setTimeout(()=>{
+        $("#msg").style.opacity = "1";
+    }
+    , 0)
+    setTimeout((mss=ms)=>{
+        $("#msg").style.opacity = "0";
+        setTimeout(()=>{
+            $("#msg").style.display = "none";
+        }
+        , mss);
+    }
+    , ms);
+
+}
