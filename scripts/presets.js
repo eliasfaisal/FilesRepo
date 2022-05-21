@@ -1,12 +1,3 @@
-/*
-    Omeration's Educational Castle | Open Exams Project
-    ===================================================
-    Created: 17:23 | 24 Jan 2022
-    Open Exams Project : oec-project (github)
-    programmedd by @EliasFaisal82 (fb)
-
-*/
-
 function $(s) {
     return document.querySelector(s);
 }

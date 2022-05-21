@@ -1,6 +1,8 @@
 /*
     Created: 18 Feb 2022
-    by @EliasFaisal82 (fb)
+    Author : Elias Faisal
+             http://github.com/eliasfaisal/
+    License: CC0-1.0 license
 */
 * {
     font-family: Almarai;
@@ -75,7 +77,7 @@ body {
     height: fit-content;
     width: fit-content;
     color: #fff;
-    margin: auto 2.5px auto auto;
+    margin: auto auto auto auto;
 }
 
 .brain-icon {

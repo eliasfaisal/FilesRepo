@@ -1,6 +1,8 @@
 /*
-    Created: 19 Feb 2022
-    by @EliasFaisal82 (fb)
+    Created: 18 Feb 2022
+    Author : Elias Faisal
+             http://github.com/eliasfaisal/
+    License: CC0-1.0 license
 */
 
 maps = {};
@@ -113,7 +115,7 @@ function appendFiles(semester, subname) {
 
         out += `<a href="${link}" download target="_blank" class="file">
                         <div class="file-title">
-                            <div class="dnd-icon"></div>
+                            <!-- <div class="dnd-icon"></div> -->
                             <div>${name}</div>
                         </div>
                         <div class="title-sep"></div>

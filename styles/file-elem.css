@@ -1,10 +1,13 @@
 /*
     Created: 18 Feb 2022
-    by @EliasFaisal82 (fb)
+    Author : Elias Faisal
+             http://github.com/eliasfaisal/
+    License: CC0-1.0 license
 */
 .file {
     width: -webkit-fill-available;
-    height: 70px;
+    height: auto;
+    padding-bottom: 10px;
     background: #1e293b;
     color: #ffffffba;
     border-radius: 6px;
@@ -28,6 +31,7 @@
     font-size: large;
     display: flex;
     justify-content: space-between;
+    direction: rtl;
 }
 
 .dnd-icon {
@@ -42,7 +46,7 @@
     width: 20%;
     height: 1px;
     background: #fffc;
-    margin: 0 18px 0 auto;
+    margin: 0 18px 5px auto;
 }
 
 /*-------*/
