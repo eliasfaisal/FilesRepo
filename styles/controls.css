@@ -45,8 +45,8 @@
     flex-direction: column;
     text-align: center;
     height: 30px;
-    border-radius: 7px;
-    border: solid 2px #2a374b;
+    border-radius: 3px;
+    border: solid 1px #2a374b;
     font-size: small;
     color: #ffffffb3;
     /* firefox */
@@ -55,7 +55,7 @@
 
 .semester-container>div:hover {
     background: #243146;
-    border: solid 2px #384963;
+    border: solid 1px #384963;
 }
 
 .semester-1 {
@@ -66,16 +66,16 @@
     margin: 0 0 0 2.5px;
 }
 
-.subjects,.profession {
+.subjects,.department {
     background: #1e293b;
     width: -webkit-fill-available;
     margin: 5px 0;
     text-align: center;
-    direction: rtl;
+    /* direction: rtl; */
     height: 34px;
     color: #ffffffb3;
-    border-radius: 6px;
-    border: solid 2px #2a374b;
+    border-radius: 3px;
+    border: solid 1px #2a374b;
     font-size: small;
     /* firefox */
     width: -moz-available;
@@ -88,11 +88,11 @@
 /*end of buttons */
 /*-------*/
 .serparator {
-    width: 40%;
+    width: 20%;
     height: 1px;
-    background: #fffc;
+    background: #ffffff9c;
     border-radius: 60px;
-    margin: 7.5px auto 10px auto;
+    margin: 1px auto 1px auto;
 }
 
 .files {

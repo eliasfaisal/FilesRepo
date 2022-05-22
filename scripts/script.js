@@ -18,8 +18,6 @@ onload = ()=>{
     hideLoading();
 }
 
-var loading_ani_interval = setInterval(loading_ani, 250);
-
 //assigning events
 
 //don't ask me what is this 
@@ -38,18 +36,18 @@ var loading_ani_interval = setInterval(loading_ani, 250);
             $('.semester-1').classList.add('disabled');
         }
         //clear everything
-        $(".profession").selectedIndex = 0;
-        $(".subjects").innerHTML = `<option default>المادة</option>`;
+        $(".department").selectedIndex = 0;
+        $(".subjects").innerHTML = `<option default>Subject</option>`;
         $(".files").innerHTML = "";
     }
 }
 );
 
 //professions list
-$(".profession").onchange = (e)=>{
+$(".department").onchange = (e)=>{
     let me = e.target;
     if (me.selectedIndex == 0) {
-        $(".subjects").innerHTML = `<option default>المادة</option>`;
+        $(".subjects").innerHTML = `<option default>Subject</option>`;
         $(".subjects").disabled = true;
     } else {
         //showing the available subjects in the ".subjects"
@@ -64,7 +62,7 @@ $(".subjects").onchange = (e)=>{
     if (me.selectedIndex == 0) {
         $('.files').innerHTML = "";
         return 0;
-    } else if (me.children[me.selectedIndex].innerHTML == "-- إمتحانات --") {
+    } else if (me.children[me.selectedIndex].innerHTML == "-- Exams --") {
         showMsg();
         return false;
     }

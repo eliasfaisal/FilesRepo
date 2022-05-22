@@ -40,7 +40,7 @@ body {
 
 .bar {
     width: -webkit-fill-available;
-    height: 80px;
+    height: 63px;
     /* background: #177d40; */
     /* firefox */
     width: -moz-available;
@@ -58,8 +58,8 @@ body {
     background-image: url("../assets/basmalla.png");
     background-position: center;
     background-size: cover;
-    width: 88px;
-    height: 40px;
+    width: 50px;
+    height: 23px;
 }
 
 .bar>div:nth-child(2) {
@@ -70,6 +70,7 @@ body {
     justify-content: center;
     /* firefox */
     width: -moz-available;
+    /* box-shadow: 0 2px 2px 0px #ffffff0d; */
 }
 
 .bar-title {
@@ -77,7 +78,7 @@ body {
     height: fit-content;
     width: fit-content;
     color: #fff;
-    margin: auto auto auto auto;
+    margin: auto 0 auto auto;
 }
 
 .brain-icon {
@@ -87,6 +88,16 @@ body {
     width: 35px;
     height: 35px;
     margin: auto auto auto 20px;
+}
+
+.github-icon {
+    background-image: url(../assets/github.svg);
+    background-position: center;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    margin: auto auto auto 5px;
 }
 
 /* loading widget */
@@ -118,16 +129,46 @@ body {
     width: -webkit-fill-available;
     /* firefox */
     width: -moz-available;
+    position: relative;
 }
 
 .loading_brain {
-    background-image: url("../icon.png");
+    background-image: url("../assets/bookmark-w.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 64px;
-    height: 64px;
+    background-size: 54px 54px;
+    width: 104px;
+    height: 104px;
     margin: auto;
+}
+
+@keyframes circleAnim {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.anim_circle {
+    width: 80px;
+    height: 80px;
+    /*     background: #ffffffbf; */
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 1;
+    transform: scale(0);
+    animation: circleAnim 1.2s cubic-bezier(0, 1.2, 0.39, 1.01) infinite;
 }
 
 #loading_holder>div:nth-child(2) {

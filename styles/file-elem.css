@@ -10,8 +10,8 @@
     padding-bottom: 10px;
     background: #1e293b;
     color: #ffffffba;
-    border-radius: 6px;
-    border: solid 2px #2a374b;
+    border-radius: 3px;
+    border: solid 1px #2a374b;
     display: flex;
     flex-direction: column;
     margin: 5px 0;
@@ -20,7 +20,7 @@
 
 .file:hover {
     background: #243146;
-    border: solid 2px #384963;
+    border: solid 1px #384963;
 }
 
 .file-title {
@@ -43,9 +43,9 @@
 }
 
 .title-sep {
-    width: 20%;
+    width: 25%;
     height: 1px;
-    background: #fffc;
+    background: #ffffff47;
     margin: 0 18px 5px auto;
 }
 
@@ -55,14 +55,25 @@
     width: fit-content;
     height: -webkit-fill-available;
     margin: auto 20px auto auto;
-    gap: 15px;
+    font-size:14px;
+    color:#ffffffa8;
+    /* gap: 15px; */
 }
 
 .details>div {
     height: fit-content;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .size,.ext {
-    direction: rtl;
+    direction: ltr;
+    font-size:14px;
+}
+
+.size {
+    margin-right: 5px;
+}
+
+.ext {
+    margin-left: 5px;
 }

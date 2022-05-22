@@ -17,7 +17,6 @@ function loadMaps() {
             window.maps[e.target.nnn] = JSON.parse(e.target.responseText);
         }
         reg.onerror = (e)=>{
-            clearInterval(loading_ani_interval);
             clearInterval(mapsIntervalID);
 
             for (let digit of $$(".digit")) {
@@ -31,16 +30,6 @@ function loadMaps() {
 
 }
 
-function loading_ani() {
-    let digits = [];
-    for (let i = 0; i < 12; i++) {
-        digits.push(((Math.random() * 2) + '').slice(0, 1));
-    }
-    for (let i = 0; i < digits.length; i++) {
-        $$('.digit')[i].innerHTML = digits[i];
-    }
-}
-
 function hideLoading() {
     $("main").style.transition = "300ms cubic-bezier(0.18, 0.89, 0.32, 1.28)";
     $("main").style.opacity = "1";
@@ -51,7 +40,6 @@ function hideLoading() {
         $("#loading_widget").style.display = "none";
         setTimeout(()=>{
             $('body').removeAttribute('style');
-            clearInterval(loading_ani_interval);
         }
         , 100);
     }
@@ -63,8 +51,8 @@ function hideLoading() {
 activeSemester = "semester-2-subjects";
 
 function showSubs() {
-    let index = $('.profession').selectedIndex;
-    let pro_name = $('.profession').children[index].getAttribute('name');
+    let index = $('.department').selectedIndex;
+    let pro_name = $('.department').children[index].getAttribute('name');
     let available_subs = maps["professions"][activeSemester][pro_name];
 
     let sub_elem_out = "";
@@ -72,7 +60,7 @@ function showSubs() {
         sub_elem_out += `<option name="${sub_name}">${maps[activeSemester][sub_name].name}</option>`;
     }
 
-    $('.subjects').innerHTML = `<option default>المادة</option>` + sub_elem_out;
+    $('.subjects').innerHTML = `<option default>Subject</option>` + sub_elem_out;
     $('.subjects').disabled = false;
 }
 
@@ -92,7 +80,7 @@ function getFileSize(link, timeID) {
     reg.onload = (e)=>{
         let me = e.target;
         let size = parseInt(me.getResponseHeader('content-length'));
-        size = (size / 1024 / 1024).toFixed(1) + "Mb";
+        size = (size / 1024 / 1024).toFixed(1) + " MB";
         let elem = $(`div[timeID='${me.timeID}']`);
         elem.innerHTML = elem.innerHTML.replace("N/A", ` ${size} `);
     }
@@ -120,8 +108,8 @@ function appendFiles(semester, subname) {
                         </div>
                         <div class="title-sep"></div>
                         <div class="details">
-                            <div timeID="${timeID}" class="size">الحجم : ${"N/A"}</div>
-                            <div class="ext">الصيغة : ${getExt(file)}</div>
+                            <div timeID="${timeID}" class="size">${"N/A"}</div>•
+                            <div class="ext">${getExt(file)}</div>
                         </div>
                     </a>`;
         //fetch the size
