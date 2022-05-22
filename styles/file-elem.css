@@ -1,0 +1,79 @@
+/*
+    Created: 18 Feb 2022
+    Author : Elias Faisal
+             http://github.com/eliasfaisal/
+    License: CC0-1.0 license
+*/
+.file {
+    width: -webkit-fill-available;
+    height: auto;
+    padding-bottom: 10px;
+    background: #1e293b;
+    color: #ffffffba;
+    border-radius: 3px;
+    border: solid 1px #2a374b;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+.file:hover {
+    background: #243146;
+    border: solid 1px #384963;
+}
+
+.file-title {
+    width: -webkit-fill-available;
+    height: fit-content;
+    text-align: right;
+    margin: 10px 20px;
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+}
+
+.dnd-icon {
+    width: 17px;
+    height: 17px;
+    background-image: url('../assets/download.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+.title-sep {
+    width: 25%;
+    height: 1px;
+    background: #ffffff47;
+    margin: 0 18px 5px auto;
+}
+
+/*-------*/
+.details {
+    display: flex;
+    width: fit-content;
+    height: -webkit-fill-available;
+    margin: auto 20px auto auto;
+    font-size:14px;
+    color:#ffffffa8;
+    /* gap: 15px; */
+}
+
+.details>div {
+    height: fit-content;
+    /* margin: auto; */
+}
+
+.size,.ext {
+    direction: ltr;
+    font-size:14px;
+}
+
+.size {
+    margin-right: 5px;
+}
+
+.ext {
+    margin-left: 5px;
+}

@@ -1,0 +1,33 @@
+{
+  "exams": {
+    "name" : "-- Exams --",
+    "files": []
+  },
+
+  "subject_1":{
+    "name":"subject 1",
+    "files":[
+      "file1.pdf",
+      "file2.pdf",
+      "file3.pdf"
+    ]
+  },
+
+  "subject_2":{
+    "name":"subject 2",
+    "files":[
+      "file1.pdf",
+      "file2.pdf",
+      "file3.pdf"
+    ]
+  },
+
+  "subject_3":{
+    "name":"subject 3",
+    "files":[
+      "file1.pdf",
+      "file2.pdf",
+      "file3.pdf"
+    ]
+  }
+}
