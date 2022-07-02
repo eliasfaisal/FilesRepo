@@ -1,77 +1,78 @@
 <!-- 
     Created: 18 Feb 2022
+    Updated:  2 Jul 2022
     Author : Elias Faisal
              http://github.com/eliasfaisal/
     License: CC0-1.0 license
  -->
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Files Repo | CSC Karary</title>
-        <link preload rel="icon" href="./assets/bookmark.svg">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
-        <link preload rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Almarai"/>
-        <!-- styles -->
-        <link preload rel="stylesheet" href="styles/main.css"/>
-        <link preload rel="stylesheet" href="styles/controls.css"/>
-        <link preload rel="stylesheet" href="styles/file-elem.css"/>
-        <!-- OG -->
-        <meta property="og:title" content="Files Repository | Computer Science College | Karary University">
-        <meta property="og:description" content="Files & Sheets Repository of previous Semesters, 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="assets/bookmark.svg">
+	<link preload rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Almarai"/>
+	<title>Files Repo</title>
+	<!-- OG -->
+	<meta property="og:title" content="Files Repo">
+	<meta property="og:description" content="Files &amp; Sheets Repository of previous Semesters, 
             Made By Elias Faisal">
-    </head>
-    <body style="overflow:hidden;">
-        <div id="loading_widget">
-            <div id="loading_holder">
-                <div>
-                    <div class="loading_brain"></div>
-                    <div class="anim_circle"></div>
-                </div>
-            </div>
-        </div>
-        <!--      -->
-        <main style="transform:scale(0.9);opacity:0;">
-            <div style="display:none;opacity:0;" id="msg">
-                نعتذر ليس هنالك امتحانات حاليا،<br>قم بالتواصل مع الدفعة التي تسبقك
-            
-            </div>
-            <div class="bar">
-                <div>
-                    <div title="إبدا دائماً بالبسملة" class="basmalla"></div>
-                </div>
-                <div>
-                    <div class="bar-title">Files Repository</div>
-                    <a title="View on Github" target="_blank" href="https://github.com/eliasfaisal/FilesRepo" class="github-icon"></a>
-                </div>
-            </div>
-            <div class="main-container">
-                <div class="holder">
-                    <div class="options">
-                        <div class="semester-container">
-                            <div name="semester-1-subjects" class="semester-1 disabled">Semester 1</div>
-                            <div name="semester-2-subjects" class="semester-2">Semester 2</div>
-                        </div>
-                        <select class="department">
-                            <option default>Department</option>
-                            <option name="information security">Information Security</option>
-                            <option name="information technology">Information Technology</option>
-                            <option name="computer science">Computer Science</option>
-                            <option name="software engineering">Software Engineering</option>
-                            <option name="network systems">Network Systems</option>
-                            <option name="information systems">Information Systems</option>
-                        </select>
-                        <select disabled class="subjects">
-                            <option default>Subject</option>
-                        </select>
-                    </div>
-                    <div class="serparator"></div>
-                    <div class="files"></div>
-                </div>
-            </div>
-            <!-- scripts -->
-            <script preload src="scripts/presets.js"></script>
-            <script preload src="scripts/funcs.js"></script>
-            <script defer src="scripts/script.js"></script>
-        </main>
-    </body>
+	<!-- Styles -->
+	<link preload rel="stylesheet" type="text/css" href="styles/style.css">
+	<style id="headerStyler" type="text/css">
+		#header::after{
+			content: '';
+			display: none;
+			left: 0px;
+		}
+		#header::before{
+			content: '';
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="loading">
+		<div id="loading_holder">
+            <div>
+                <div class="loading_brain"></div>
+            	<div class="anim_circle"></div>
+        	</div>
+    	</div>
+    </div>
+	<!--  -->
+	<div id="bar">
+		<div class="icon"></div>
+		<div class="text-title">Files Repo 2.0</div>
+	</div>
+	<div id="content">
+		<div id="header">
+			<div class="underlined-title">
+				<div class="text">Subjects</div>
+				<div class="underline"></div>
+			</div>
+			<div id="config">
+				<select id="semester">
+					<option>Semester 1</option>
+					<option selected>Semester 2</option>
+				</select>
+				<select id="current-content"></select>
+				<input type="search" placeholder="Search" id="search">
+			</div>
+		</div>
+		<div id="filesContainer">
+			<!-- <div id="befferer">
+				<div id="loading_holder">
+	            	<div>
+		                <div class="loading_brain"></div>
+		            	<div class="anim_circle"></div>
+	        		</div>
+    			</div>
+			</div> -->
+		</div>
+	</div>
+	<!-- scripts -->
+	<script preload type="text/javascript" src="scripts/preset.js"></script>
+	<script defer type="text/javascript" src="scripts/script.js"></script>
+</body>
 </html>

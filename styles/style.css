@@ -1,0 +1,289 @@
+/* 
+    Created: 18 Feb 2022
+    Updated:  2 Jul 2022
+    Author : Elias Faisal
+             http://github.com/eliasfaisal/
+    License: CC0-1.0 license
+ */
+
+ * {
+    --c1: #0f172a;
+    --c2: #0000004d;
+    --c3: #192a48;
+    user-select: none;
+    font-family: 'Almarai';
+}
+
+body {
+    margin: 0;
+    background-color: var(--c1);
+}
+
+/* LOADING */
+#loading {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background-color: #0f172a;
+    transition: 300ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    width: 100%;
+    height: 100%;
+}
+
+#loading_holder {
+    width: 104px;
+    height: 104px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#loading_holder>div {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.loading_brain {
+    background-image: url(../assets/bookmark.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 54px 54px;
+    width: 104px;
+    height: 104px;
+    margin: auto;
+}
+
+@keyframes circleAnim {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.anim_circle {
+    width: 80px;
+    height: 80px;
+    /* background: #ffffffbf; */
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 1;
+    transform: scale(0);
+    animation: circleAnim 1.2s cubic-bezier(0, 1.2, 0.39, 1.01) infinite;
+}
+
+#befferer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    background-color: var(--c1);
+}
+
+/* BAR */
+#bar {
+    width: 100%;
+    height: 50px;
+    background-color: var(--c2);
+    display: flex;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center;
+    background-image: url("../assets/bookmark.svg");
+    margin-left: 5px;
+}
+
+.text-title {
+    color: #fff;
+    font-size: 22px;
+    align-self: center;
+}
+
+/* CONTENT */
+#content {
+    width: 100%;
+}
+
+#header::before {
+    content: "";
+    position: absolute;
+    height: 60px;
+    width: 30px;
+    top: 0;
+    left: 1000px;
+    background-image: linear-gradient(270deg, #ffffff17, #0000);
+}
+
+#header::after {
+    content: "";
+    position: absolute;
+    height: 60px;
+    width: 30px;
+    top: 0;
+    left: 0px;
+    background-image: linear-gradient(90deg, #ffffff17, #0000);
+}
+
+#header {
+    position: relative;
+    display: flex;
+    padding: 15px;
+    height: 30px;
+    overflow-x: auto;
+}
+
+.underlined-title {
+    margin: auto 0;
+}
+
+.text {
+    color: #fff;
+    font-size: 16px;
+}
+
+.underline {
+    width: 70%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 60px;
+    margin-top: 3px;
+}
+
+#config {
+    display: flex;
+}
+
+#config > * {
+    margin: 0 2px;
+}
+
+#current-content,#search,#semester {
+    height: 100%;
+    background-color: var(--c3);
+    color: #fff;
+    padding: 0 10px;
+    border: 1px solid #ffffff08;
+}
+
+#semester {
+    margin-left: 15px;
+}
+
+#current-content {
+}
+
+#search {
+}
+
+/* Files Container */
+#filesContainer {
+    padding: 0 12px;
+    text-align: center;
+    overflow-y: auto;
+    position: relative;
+}
+
+.link-holder {
+    width: max-content;
+    height: max-content;
+    display: inline-block;
+    margin: 1px;
+}
+
+a.file {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 332px;
+    padding: 5px 5px;
+    background-color: #243865;
+    transition: 130ms;
+    border-radius: 3px;
+}
+
+a.file > .ext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #2b4578;
+    transition: 130ms;
+    border-radius: 10%;
+    text-transform: uppercase;
+}
+
+a.file > .details {
+    align-self: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+a.file > .details .overlay::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 22px;
+    left: 220px;
+    background-image: linear-gradient(90deg, #0000, #243865);
+    transition: 130ms;
+}
+
+a.file > .details .overlay {
+    width: 260px;
+    height: 22px;
+    position: relative;
+}
+
+a.file > .details .name {
+    font-size: 18px;
+    text-align: start;
+    width: 260px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+a.file > .details > .size {
+    font-size: 12px;
+    color: #fff9;
+    text-align: start;
+}
+
+a.file:hover {
+    background-color: #1e2e52;
+}
+
+a.file:hover >.ext {
+    background-color: #243a65;
+}
+
+a.file:hover .overlay::before {
+    background-image: linear-gradient(90deg, #0000, #1e2e52);
+}
