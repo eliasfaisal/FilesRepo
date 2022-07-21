@@ -50,6 +50,14 @@
     "Semester 2": {
         "folder": "semester-2-subjects",
         "subjects": {
+            "exams-worksheets" : {
+                "name": "إمتحانات - أوراق عمل",
+                "files": [
+                    "مهم التكامل.zip",
+                    "نماذج إمتحانات - الجبر الخطي.zip",
+                    "نماذج إمتحانات - التكامل.zip"
+                ]
+            },
             "SE": {
                 "name": "هندسة البرمجيات",
                 "files": [
