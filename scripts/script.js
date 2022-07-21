@@ -17,15 +17,40 @@ onload = ()=>{
 	loadConfig();
 }
 
+function getDate(str, joiner = " / ") {
+	let conv = {
+		"jan":1,
+		"feb":2,
+		"mar":3,
+		"apr":4,
+		"may":5,
+		"jun":6,
+		"jul":7,
+		"aug":8,
+		"sep":9,
+		"oct":10,
+		"nov":11,
+		"dec":12
+	};
+
+	str = str.split(",")[1].split(" ");
+	str.splice(0,1);
+	str.splice(4,1);
+	str.splice(3,1);
+	str[1] = [conv[str[1].toLowerCase()]];
+	return str.join(joiner);
+}
+
 function fetchSize(id,url) {
 	let xhr = new XMLHttpRequest;
 	xhr.open("head",url);
 	xhr.id = id;
 	xhr.onload = (e)=>{
 		let me = e.target;
+		let date = getDate(me.getResponseHeader("last-modified"))
 		let size = Number(me.getResponseHeader('content-length'));
 		size = (size / 1024 /1024).toFixed(1);
-		$(`div[timeID='${me.id}']`).querySelector(".size").innerHTML = size + " MB";
+		$(`div[timeID='${me.id}']`).querySelector(".size").innerHTML = `${date} • ${size} MB`;
 	}
 	xhr.send();
 }

@@ -233,6 +233,7 @@ a.file > .ext {
     transition: 130ms;
     border-radius: 10%;
     text-transform: uppercase;
+    font-size: 13px;
 }
 
 a.file > .details {
