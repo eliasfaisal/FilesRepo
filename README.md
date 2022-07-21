@@ -1,4 +1,4 @@
-<img align="right" height="177px" src="assets/bookmark-w.svg" /> Files Repository
+<img align="right" height="177px" src="assets/bookmark.svg" /> Files Repository
 ====
 This repo was made for purpose of helping mates that having issues downloading the files from the telegram group,
 and special thanks to everyone, whom supported me in this small but useful project; so as it can stay as long as possible.<br/>
