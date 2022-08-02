@@ -1,78 +1,127 @@
 <!-- 
-    Created: 18 Feb 2022
-    Updated:  2 Jul 2022
     Author : Elias Faisal
              http://github.com/eliasfaisal/
     License: CC0-1.0 license
+
+    B64-Message(1): c2FkIHJlYWxpdHkgaW4gbXkgY291bnRyeSBpcyBjb21wdXRlciBzY2llbmNlIGlzIGRpc3Jlc3BlY3RlZA==
  -->
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="assets/bookmark.svg">
-	<link preload rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Almarai"/>
-	<title>Files Repo</title>
-	<!-- OG -->
-	<meta property="og:title" content="Files Repo">
-	<meta property="og:description" content="Files &amp; Sheets Repository of previous Semesters, 
-            Made By Elias Faisal">
-	<!-- Styles -->
-	<link preload rel="stylesheet" type="text/css" href="styles/style.css">
-	<style id="headerStyler" type="text/css">
-		#header::after{
-			content: '';
-			display: none;
-			left: 0px;
-		}
-		#header::before{
-			content: '';
-			display: none;
-		}
-	</style>
-</head>
-<body>
-	<div id="loading">
-		<div id="loading_holder">
-            <div>
-                <div class="loading_brain"></div>
-            	<div class="anim_circle"></div>
-        	</div>
-    	</div>
-    </div>
-	<!--  -->
-	<div id="bar">
-		<div class="icon"></div>
-		<div class="text-title">Files Repo 2.0</div>
-	</div>
-	<div id="content">
-		<div id="header">
-			<div class="underlined-title">
-				<div class="text">Subjects</div>
-				<div class="underline"></div>
-			</div>
-			<div id="config">
-				<select id="semester">
-					<option>Semester 1</option>
-					<option selected>Semester 2</option>
-				</select>
-				<select id="current-content"></select>
-				<input type="search" placeholder="Search" id="search">
-			</div>
-		</div>
-		<div id="filesContainer">
-			<!-- <div id="befferer">
-				<div id="loading_holder">
-	            	<div>
-		                <div class="loading_brain"></div>
-		            	<div class="anim_circle"></div>
-	        		</div>
-    			</div>
-			</div> -->
-		</div>
-	</div>
-	<!-- scripts -->
-	<script preload type="text/javascript" src="scripts/preset.js"></script>
-	<script defer type="text/javascript" src="scripts/script.js"></script>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="assets/icon.svg">
+        <link preload rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Almarai"/>
+        <title>Files Repo</title>
+        <!-- OG -->
+        <meta property="og:title" content="Files Repo">
+        <meta property="og:description" content="Documents Repository">
+        <!-- Styles -->
+        <link preload rel="stylesheet" type="text/css" href="styles/style.css">
+        <style id="responsive" type="text/css"></style>
+    </head>
+    <body>
+        <div id="widgets-container">
+            <div class="widget" id="loading-widget">
+                <div class="content">
+                    <div class="top">
+                        <div class="icon"></div>
+                        <div class="text">Files Repo</div>
+                    </div>
+                    <div class="bottom">
+                        <div class="icon"></div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div id="menu-btn">
+                <div class="icon"></div>
+            </div>
+            <!--  -->
+            <div class="widget" style="top:-100%;" id="about-widget">
+                <div class="content">
+                    <div class="logo">
+                        <div class="icon"></div>
+                        <div class="text">Files Repo</div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="details">
+                        <div class="left">
+                            <div class="text">Author:</div>
+                            <div class="text">Version:</div>
+                            <div class="text">Update Date:</div>
+                            <div class="text">Content Update:</div>
+                            <div class="text">License:</div>
+                        </div>
+                        <div class="right">
+                            <div class="text">Elias Faisal</div>
+                            <div class="text">2.0.1</div>
+                            <div class="text">2 - 8 - 2022</div>
+                            <div class="text">Forgot 😶️</div>
+                            <div class="text">CC0-1.0</div>
+                        </div>
+                    </div>
+                    <div class="qoute">‘Vanilla project, no frameworks used’</div>
+                    <a class="external-link" id="github-link" target="_blank" href="https://github.com/eliasfaisal/FilesRepo">
+                        <div class="icon"></div>
+                        <div class="text">View on Github</div>
+                    </a>
+                </div>
+            </div>
+            <!--  -->
+            <div class="widget" id="main-widget">
+                <div id="search-bar">
+                    <input id="search-input" placeholder="Search" type="search"/>
+                    <div class="controls">
+                        <div class="btn" id="run-search-btn">
+                            <div class="icon"></div>
+                        </div>
+                        <!--  -->
+                        <div class="btn" id="close-search-btn">
+                            <div class="icon"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bar">
+                    <div class="logo">
+                        <div class="icon"></div>
+                        <div class="text">Files Repo</div>
+                    </div>
+                    <!--  -->
+                    <div class="controls">
+                        <div class="custom-select" id="selected-semester">
+                            <div class="text">Semester 2</div>
+                            <!--  -->
+                            <select class="custom-select-cont" id="selected-semester-control">
+                                <option>Semester 1</option>
+                                <option selected>Semester 2</option>
+                            </select>
+                        </div>
+                        <!--  -->
+                        <div class="custom-select" id="selected-subject">
+                            <div class="text">Subject</div>
+                            <!--  -->
+                            <select class="custom-select-cont" id="selected-subject-control">
+                                <option selected>Subject</option>
+                                <option>All</option>
+                                <option>Subject 1</option>
+                            </select>
+                        </div>
+                        <!--  -->
+                        <div class="btn" id="search-btn">
+                            <div class="icon"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="count">0 Files</div>
+                    <div id="files-conainer"></div>
+                </div>
+            </div>
+        </div>
+        <!-- scripts -->
+        <script preload type="text/javascript" src="scripts/predefined.js"></script>
+        <script defer type="text/javascript" src="scripts/responsive.js"></script>
+        <script defer type="text/javascript" src="scripts/main.js"></script>
+    </body>
 </html>
