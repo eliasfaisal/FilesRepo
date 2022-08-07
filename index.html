@@ -1,73 +1,126 @@
 <!-- 
-    Created: 18 Feb 2022
     Author : Elias Faisal
              http://github.com/eliasfaisal/
     License: CC0-1.0 license
+
+    B64-Message(1): c2FkIHJlYWxpdHkgaW4gbXkgY291bnRyeSBpcyBjb21wdXRlciBzY2llbmNlIGlzIGRpc3Jlc3BlY3RlZA==
  -->
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Files Repo | Prototype</title>
-        <link preload rel="icon" href="./assets/bookmark.svg">
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="assets/icon.svg">
         <link preload rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Almarai"/>
-        <!-- styles -->
-        <link preload rel="stylesheet" href="styles/main.css"/>
-        <link preload rel="stylesheet" href="styles/controls.css"/>
-        <link preload rel="stylesheet" href="styles/file-elem.css"/>
+        <title>Files Repo [Prototype]</title>
         <!-- OG -->
-        <meta property="og:title" content="Files Repository | [College Name] | [University Name]">
-        <meta property="og:description" content="Files & Sheets Repository of previous Semesters, 
-            Made By Elias Faisal">
+        <meta property="og:title" content="Files Repo">
+        <meta property="og:description" content="Documents Repository">
+        <!-- Styles -->
+        <link preload rel="stylesheet" type="text/css" href="styles/style.css">
+        <style id="responsive" type="text/css"></style>
     </head>
-    <body style="overflow:hidden;">
-        <div id="loading_widget">
-            <div id="loading_holder">
-                <div>
-                    <div class="loading_brain"></div>
-                    <div class="anim_circle"></div>
+    <body>
+        <div id="widgets-container">
+            <div class="widget" id="loading-widget">
+                <div class="content">
+                    <div class="top">
+                        <div class="icon"></div>
+                        <div class="text">Files Repo</div>
+                    </div>
+                    <div class="bottom">
+                        <div class="icon"></div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div id="menu-btn">
+                <div class="icon"></div>
+            </div>
+            <!--  -->
+            <div class="widget" style="top:-100%;" id="about-widget">
+                <div class="content">
+                    <div class="logo">
+                        <div class="icon"></div>
+                        <div class="text">Files Repo</div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="details">
+                        <div class="left">
+                            <div class="text">Author:</div>
+                            <div class="text">Version:</div>
+                            <div class="text">Update Date:</div>
+                            <div class="text">Content Update:</div>
+                            <div class="text">License:</div>
+                        </div>
+                        <div class="right">
+                            <div class="text">Elias Faisal</div>
+                            <div class="text">2.0.1</div>
+                            <div class="text"># - # - 20##</div>
+                            <div class="text"># - # - 20##</div>
+                            <div class="text">CC0-1.0</div>
+                        </div>
+                    </div>
+                    <div class="qoute">‘Vanilla project, no frameworks used’</div>
+                    <a class="external-link" id="github-link" target="_blank" href="https://github.com/eliasfaisal/FilesRepo">
+                        <div class="icon"></div>
+                        <div class="text">View on Github</div>
+                    </a>
+                </div>
+            </div>
+            <!--  -->
+            <div class="widget" id="main-widget">
+                <div id="search-bar">
+                    <input id="search-input" placeholder="Search" type="search"/>
+                    <div class="controls">
+                        <div class="btn" id="run-search-btn">
+                            <div class="icon"></div>
+                        </div>
+                        <!--  -->
+                        <div class="btn" id="close-search-btn">
+                            <div class="icon"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bar">
+                    <div class="logo">
+                        <div class="icon"></div>
+                        <div class="text">Files Repo</div>
+                    </div>
+                    <!--  -->
+                    <div class="controls">
+                        <div class="custom-select" id="selected-semester">
+                            <div class="text">Semester 1</div>
+                            <!--  -->
+                            <select class="custom-select-cont" id="selected-semester-control">
+                                <option selected>Semester 1</option>
+                            </select>
+                        </div>
+                        <!--  -->
+                        <div class="custom-select" id="selected-subject">
+                            <div class="text">Subject</div>
+                            <!--  -->
+                            <select class="custom-select-cont" id="selected-subject-control">
+                                <option selected>Subject</option>
+                                <option>All</option>
+                                <option>Subject 1</option>
+                            </select>
+                        </div>
+                        <!--  -->
+                        <div class="btn" id="search-btn">
+                            <div class="icon"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="count">0 Files</div>
+                    <div id="files-conainer"></div>
                 </div>
             </div>
         </div>
-        <!--      -->
-        <main style="transform:scale(0.9);opacity:0;">
-            <div style="display:none;opacity:0;" id="msg">
-                نعتذر ليس هنالك امتحانات حاليا،<br>قم بالتواصل مع الدفعة التي تسبقك
-            
-            </div>
-            <div class="bar">
-                <div>
-                    <div title="إبدا دائماً بالبسملة" class="basmalla"></div>
-                </div>
-                <div>
-                    <div class="bar-title">Files Repository Prototype</div>
-                    <a title="View on Github" target="_blank" href="https://github.com/eliasfaisal/FilesRepo" class="github-icon"></a>
-                </div>
-            </div>
-            <div class="main-container">
-                <div class="holder">
-                    <div class="options">
-                        <div class="semester-container">
-                            <div name="semester-1-subjects" class="semester-1">Semester 1</div>
-                            <div name="semester-2-subjects" class="semester-2 disabled">Semester 2</div>
-                        </div>
-                        <select class="department">
-                            <option default>Department</option>
-                            <option name="profession 1">Profession/Department 1</option>
-                            <option name="profession 2">Profession/Department 2</option>
-                        </select>
-                        <select disabled class="subjects">
-                            <option default>Subject</option>
-                        </select>
-                    </div>
-                    <div class="serparator"></div>
-                    <div class="files"></div>
-                </div>
-            </div>
-            <!-- scripts -->
-            <script preload src="scripts/presets.js"></script>
-            <script preload src="scripts/funcs.js"></script>
-            <script defer src="scripts/script.js"></script>
-        </main>
+        <!-- scripts -->
+        <script preload type="text/javascript" src="scripts/predefined.js"></script>
+        <script defer type="text/javascript" src="scripts/responsive.js"></script>
+        <script defer type="text/javascript" src="scripts/main.js"></script>
     </body>
 </html>

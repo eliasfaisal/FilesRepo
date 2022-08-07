@@ -1,0 +1,22 @@
+{
+    "Semester 1": {
+        "folder": "semester-1-subjects",
+        "subjects": {
+            "sub1": {
+                "name": "subject 1",
+                "files": [
+                    "file1.pdf",
+                    "file2.pdf"
+                ]
+            },
+            "sub2": {
+                "name": "subject 2",
+                "files": [
+                    "file1.pdf",
+                    "file2.pdf",
+                    "file3.pdf"
+                ]
+            }
+        }
+    }
+}
