@@ -5,6 +5,7 @@
 
     B64-Message(3): aHVtYW4gbXVzdCB1c2UgaGlzIGJyYWluIHRoZSBwcm9wZXIgd2F5LiB0aGFua3MgZm9yIHlvdXIgdGltZSByZWFkaW5nIHRoaXM=
  */
+const SUBJECTS_LOCATION = "subjects";
 
 console.log(`gotcha, trying to inspect the code 😶️,
 better see the github repo: http://github.com/eliasfaisal/
@@ -97,7 +98,7 @@ function fetchSize(id,url) {
 
 function loadConfig() {
     let xhr = new XMLHttpRequest;
-    xhr.open("get","subjects/config.json");
+    xhr.open("get",`${SUBJECTS_LOCATION}/config.json`);
     xhr.onload = (e)=>{
         window.config = JSON.parse( e.target.responseText );
         parseData();
@@ -138,7 +139,7 @@ function parseContent() {
             for(let file of g[0]){
                 let name = file.split(".")[0];
                 let ext = file.split(".")[1];
-                let link = `subjects/${config[semester].folder}/${g[1]}/${file}`;
+                let link = `${SUBJECTS_LOCATION}/${config[semester].folder}/${g[1]}/${file}`;
                 let tID = Math.random();
                 out += `<div timeID="${tID}" class="link-holder">
                         <a title="${name}" class="file" href="${link}">
@@ -176,7 +177,7 @@ function parseContent() {
     for(let file of files){
         let name = file.split(".")[0];
         let ext = file.split(".")[1];
-        let link = `subjects/${config[semester].folder}/${sub}/${file}`;
+        let link = `${SUBJECTS_LOCATION}/${config[semester].folder}/${sub}/${file}`;
         let tID = Math.random();
         out += `<div timeID="${tID}" class="link-holder">
                 <a title="${name}" class="file" href="${link}">

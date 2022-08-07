@@ -11,6 +11,11 @@ onresize = ()=>{
     $("#search-input").style.width = innerWidth - 104 + "px";
     //
     let w = parseInt(innerWidth / 346) * 346;
+    if(w < 342*2 || innerWidth < 342*2){
+        $("#files-conainer").style.textAlign = "center";
+    }else{
+        $("#files-conainer").style.textAlign = "";
+    }
     if(w == 0 || w < 346 || innerWidth < 346){
         $("#files-conainer").style.marginLeft = "0px";
         $("#files-conainer").style.marginRight = "0px";
