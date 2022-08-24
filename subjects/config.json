@@ -2,6 +2,13 @@
     "Semester 1": {
         "folder": "semester-1-subjects",
         "subjects": {
+            "exams-worksheets" : {
+                "name": "إمتحانات - أوراق عمل",
+                "files": [
+                    "الفصل الأول (1).zip",
+                    "الفصل الأول (2).zip"
+                ]
+            },
             "communication skills": {
                 "name": "مهارات الإتصال",
                 "files": [
@@ -53,6 +60,7 @@
             "exams-worksheets" : {
                 "name": "إمتحانات - أوراق عمل",
                 "files": [
+                    "الفصل النهائي (سمستر 2).zip",
                     "مهم التكامل.zip",
                     "نماذج إمتحانات - الجبر الخطي.zip",
                     "نماذج إمتحانات - التكامل.zip"
