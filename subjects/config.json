@@ -161,5 +161,18 @@
                 ]
             }
         }
-    }
+    },
+        "Semester 3": {
+        "folder": "semester-3-subjects",
+        "subjects": {
+            "OS" : {
+                "name": "Operating Systems",
+                "files": [
+                    "ch1.ppt",
+                    "ch1 answers.pdf",
+                    "Operation System Concepts 9th Edition.pdf"
+                ]
+            }
+       }
+     }
 }
