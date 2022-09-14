@@ -41,3 +41,18 @@ rename the `text` element above it with the default selected semester text e.g `
 	<!-- and so on -->
 </select>
 ``` 
+### Setup Configuring for upload and automation
+- create a file `init.setup`with the pattern
+```text
+subject name
+subject folder name
+semester number
+
+example
+-------
+computer science intro
+computer-science-intro
+3
+```
+- put this file with the files you want to upload, and upload them all</br>
+to the `/setup/` folder, the `Python Setup Script` will take care of the rest. including updating `config.json`
