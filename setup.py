@@ -5,7 +5,7 @@ Author : ELias Faisal
 Github : github.com/eliasfaisal
 Date   : 14 Sep 2022 | 16:58
 
-.setup file pattern
+init.setup file pattern
 -------------------
 [subject name]
 [subject folder name]
@@ -30,7 +30,7 @@ def build():
 	files = os.listdir()
 
 	# read and parse setup file
-	setupFile = open(".setup","r")
+	setupFile = open("init.setup","r")
 	setupFileData = setupFile.read().split("\n")
 	setupFile.close()
 
@@ -43,7 +43,7 @@ def build():
 	if setupFileData[1] not in os.listdir():
 		os.mkdir(setupFileData[1])
 	os.chdir(f'{setupFileData[1]}')
-	os.system("rm ../../../setup/.setup")
+	os.system("rm ../../../setup/init.setup")
 	os.system(f"mv ../../../setup/* ./")
 
 	# read and decode config file
@@ -57,7 +57,7 @@ def build():
 		configFileData[loc]["subjects"][setupFileData[1]] = {"name":"","files":[]}
 		configFileData[loc]["subjects"][setupFileData[1]]["name"] = setupFileData[0]
 	for file in files:
-		if file != ".setup":
+		if file != "init.setup":
 			configFileData[loc]["subjects"][setupFileData[1]]["files"].append(file)
 	
 	# write the updated config file
