@@ -57,7 +57,7 @@ def build():
 		configFileData[loc]["subjects"][setupFileData[1]] = {"name":"","files":[]}
 		configFileData[loc]["subjects"][setupFileData[1]]["name"] = setupFileData[0]
 	for file in files:
-		if file != "init.setup":
+		if file != "init.setup" and file != ".nofile":
 			configFileData[loc]["subjects"][setupFileData[1]]["files"].append(file)
 	
 	# write the updated config file
