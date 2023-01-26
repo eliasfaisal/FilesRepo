@@ -137,8 +137,11 @@ function parseContent() {
         for(let g of files){
             fcount += g[0].length;
             for(let file of g[0]){
-                let name = file.split(".")[0];
-                let ext = file.split(".")[1];
+                let exts = file.split(".");
+		let ext = exts[exts.length-1];
+		exts.pop();
+		let name = exts.join(".");
+                delete(exts);
                 let link = `${SUBJECTS_LOCATION}/${config[semester].folder}/${g[1]}/${file}`;
                 let tID = Math.random();
                 out += `<div timeID="${tID}" class="link-holder">
@@ -175,8 +178,11 @@ function parseContent() {
     let fetchStack = [];
 
     for(let file of files){
-        let name = file.split(".")[0];
-        let ext = file.split(".")[1];
+        let exts = file.split(".");
+	let ext = exts[exts.length-1];
+	exts.pop();
+	let name = exts.join(".");
+        delete(exts);
         let link = `${SUBJECTS_LOCATION}/${config[semester].folder}/${sub}/${file}`;
         let tID = Math.random();
         out += `<div timeID="${tID}" class="link-holder">
