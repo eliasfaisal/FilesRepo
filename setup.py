@@ -4,13 +4,11 @@ Setup Script Files Repo
 Author : ELias Faisal
 Github : github.com/eliasfaisal
 Date   : 14 Sep 2022 | 16:58
-
 init.setup file pattern
 -------------------
 [subject name]
 [subject folder name]
 [semester number]
-
 example
 -------
 Computer Science Introduction 
@@ -59,6 +57,7 @@ def build():
 	for file in files:
 		if file != "init.setup" and file != ".nofile":
 			configFileData[loc]["subjects"][setupFileData[1]]["files"].append(file)
+	configFileData[loc]["subjects"][setupFileData[1]]["files"].sort()
 	
 	# write the updated config file
 	configFile = open("../../config.json","w")
