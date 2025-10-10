@@ -37,7 +37,11 @@ def build():
 		exit()
 
 	# move files to target dir and create folder if not excisted
-	os.chdir(f'../subjects/semester-{setupFileData[2]}-subjects')
+	os.chdir("../subjects/")
+	targetDir = f"semester-{setupFileData[2]}-subjects"
+	if targetDir not in os.listdir():
+		os.mkdir(targetDir)
+	os.chdir(targetDir)
 	if setupFileData[1] not in os.listdir():
 		os.mkdir(setupFileData[1])
 	os.chdir(f'{setupFileData[1]}')
