@@ -4,6 +4,7 @@ Setup Script Files Repo
 Author : ELias Faisal
 Github : github.com/eliasfaisal
 Date   : 14 Sep 2022 | 16:58
+Update : 10 Oct 2025 | 16:43
 init.setup file pattern
 -------------------
 [subject name]
@@ -55,6 +56,13 @@ def build():
 
 	# modify config and update
 	loc = f"Semester {setupFileData[2]}"
+	
+	# check and create semester folder
+	if loc not in configFileData:
+		configFileData[loc] = {
+			"subjects" : {}
+		}
+	
 	if setupFileData[1] not in configFileData[loc]["subjects"]:
 		configFileData[loc]["subjects"][setupFileData[1]] = {"name":"","files":[]}
 		configFileData[loc]["subjects"][setupFileData[1]]["name"] = setupFileData[0]
