@@ -66,12 +66,21 @@ function loadConfig() {
 }
 
 function parseData() {
-	let semester = $("#semester").value;
+	let semesters = Object.keys(window.config);
+	let semester = semesters[ semesters.length - 1 ];
+	
+	$("#selected-semester-control").innerHTML = "";
+	for(let s in semesters){
+		$("#selected-semester-control").innerHTML += `<option>${s}</option>`;
+	}
+	$("#selected-semester-control").children[ $("#selected-semester-control").children.length - 1 ].setAttribute("selected", "");
+		
 	$("#current-content").innerHTML = "<option>Subject</option><option>All</option>";
 
 	for(let sub in config[semester].subjects){
 		$("#current-content").innerHTML += `<option value="${sub}">${config[semester].subjects[sub].name}</option>`;
 	}
+	
 	$("#loading").style.display = "none";
 }
 
