@@ -75,10 +75,10 @@ function parseData() {
 	}
 	$("#selected-semester-control").children[ $("#selected-semester-control").children.length - 1 ].setAttribute("selected", "");
 		
-	$("#current-content").innerHTML = "<option>Subject</option><option>All</option>";
+	$("#selected-subject-control").innerHTML = "<option>Subject</option><option>All</option>";
 
 	for(let sub in config[semester].subjects){
-		$("#current-content").innerHTML += `<option value="${sub}">${config[semester].subjects[sub].name}</option>`;
+		$("#selected-subject-control").innerHTML += `<option value="${sub}">${config[semester].subjects[sub].name}</option>`;
 	}
 	
 	$("#loading").style.display = "none";
