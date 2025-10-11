@@ -60,6 +60,7 @@ def build():
 	# check and create semester folder
 	if loc not in configFileData:
 		configFileData[loc] = {
+     "folder" : targetDir,
 			"subjects" : {}
 		}
 	
