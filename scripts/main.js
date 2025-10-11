@@ -113,7 +113,7 @@ try{
 	let semester = semesters[ semesters.length - 1 ];
 	
 	$("#selected-semester-control").innerHTML = "";
-	for(let s in semesters){
+	for(let s of semesters){
 		$("#selected-semester-control").innerHTML += `<option>${s}</option>`;
 	}
 	$("#selected-semester-control").children[ $("#selected-semester-control").children.length - 1 ].setAttribute("selected", "");
