@@ -101,9 +101,16 @@ function loadConfig() {
     xhr.open("get",`${SUBJECTS_LOCATION}/config.json`);
     xhr.onload = (e)=>{
         window.config = JSON.parse( e.target.responseText );
-        parseData();
-        $("#selected-semester-control").children[ $("#selected-semester-control").children.length - 1 ].setAttribute("selected", "");
-		
+				let semesters = Object.keys(window.config);
+				let semester = semesters[ semesters.length - 1 ];
+	
+				$("#selected-semester-control").innerHTML = "";
+				for(let s of semesters){
+					$("#selected-semester-control").innerHTML += `<option>${s}</option>`;
+				}
+       $("#selected-semester-control").children[ $("#selected-semester-control").children.length - 1 ].setAttribute("selected", "");
+				parseData();
+
     }
     xhr.send();
 }
@@ -111,13 +118,7 @@ function loadConfig() {
 function parseData() {
 try{
 
-	let semesters = Object.keys(window.config);
-	let semester = semesters[ semesters.length - 1 ];
 	
-	$("#selected-semester-control").innerHTML = "";
-	for(let s of semesters){
-		$("#selected-semester-control").innerHTML += `<option>${s}</option>`;
-	}
 	
 	$("#selected-subject-control").innerHTML = "<option>Subject</option><option>All</option>";
 
