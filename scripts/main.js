@@ -118,7 +118,8 @@ function loadConfig() {
 function parseData() {
 try{
 
-	
+	 let semesters = Object.keys(window.config);
+   let semester = semesters[ semesters.length - 1 ];
 	
 	$("#selected-subject-control").innerHTML = "<option>Subject</option><option>All</option>";
 
