@@ -107,6 +107,31 @@ function loadConfig() {
 }
 
 function parseData() {
+try{
+
+	let semesters = Object.keys(window.config);
+	let semester = semesters[ semesters.length - 1 ];
+	
+	$("#selected-semester-control").innerHTML = "";
+	for(let s in semesters){
+		$("#selected-semester-control").innerHTML += `<option>${s}</option>`;
+	}
+	$("#selected-semester-control").children[ $("#selected-semester-control").children.length - 1 ].setAttribute("selected", "");
+		
+	$("#selected-subject-control").innerHTML = "<option>Subject</option><option>All</option>";
+
+	for(let sub in config[semester].subjects){
+		$("#selected-subject-control").innerHTML += `<option value="${sub}">${config[semester].subjects[sub].name}</option>`;
+	}
+	
+	$("#loading").style.display = "none";
+
+}catch(ee){alert(ee)}
+
+}
+
+/*
+function parseData() {
     let semester = $("#selected-semester-control").value;
     $("#selected-subject-control").innerHTML = "<option>Subject</option><option>All</option>";
 
@@ -116,6 +141,7 @@ function parseData() {
     }
     $("#loading-widget").style.display = "none";
 }
+*/
 
 function parseContent() {
     let semester = $("#selected-semester-control").value;
