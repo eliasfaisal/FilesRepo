@@ -102,6 +102,8 @@ function loadConfig() {
     xhr.onload = (e)=>{
         window.config = JSON.parse( e.target.responseText );
         parseData();
+        $("#selected-semester-control").children[ $("#selected-semester-control").children.length - 1 ].setAttribute("selected", "");
+		
     }
     xhr.send();
 }
@@ -116,8 +118,7 @@ try{
 	for(let s of semesters){
 		$("#selected-semester-control").innerHTML += `<option>${s}</option>`;
 	}
-	$("#selected-semester-control").children[ $("#selected-semester-control").children.length - 1 ].setAttribute("selected", "");
-		
+	
 	$("#selected-subject-control").innerHTML = "<option>Subject</option><option>All</option>";
 
 	for(let sub in config[semester].subjects){
