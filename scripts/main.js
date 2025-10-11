@@ -126,7 +126,7 @@ try{
 
   $("#selected-subject > .text").innerHTML = $("#selected-subject-control").selectedOptions[0].innerText;
 	
-	$("#loading").style.display = "none";
+	$("#loading-widget").style.display = "none";
 
 }catch(ee){alert(ee)}
 
