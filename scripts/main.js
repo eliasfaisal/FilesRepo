@@ -123,6 +123,8 @@ try{
 	for(let sub in config[semester].subjects){
 		$("#selected-subject-control").innerHTML += `<option value="${sub}">${config[semester].subjects[sub].name}</option>`;
 	}
+
+  $("#selected-subject > .text").innerHTML = $("#selected-subject-control").selectedOptions[0].innerText;
 	
 	$("#loading").style.display = "none";
 
