@@ -17,6 +17,8 @@ jobs:
     - name: Script Run
       run: |
         mv "./subjects/semester-7-subjects/pm-lab/Lec4 - Queueing Theory Fundementals.pptx" "./subjects/semester-7-subjects/pm/Lec4 - Queueing Theory Fundementals.pptx"
+        rm ./subjects/semester-esd-lab-subjects/7/*
+        rm ./subjects/semester-pm-subjects/7/*
         rm -d ./subjects/semester-esd-lab-subjects/7
         rm -d ./subjects/semester-pm-subjects/7
         
