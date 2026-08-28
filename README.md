@@ -1,7 +1,6 @@
 <img align="right" height="177px" src="assets/icon.svg" /> Files Repository
 ====
-This is the official repository of academic materials for `Batch 11 (2021)`, College of Computer Science and Information Technology, Karary University.<br/>
-containing files (`docx`,`pptx`,`pdf`,`zip`, and others) for the `sheets`, `papers`, `lectures`, `references` and `notes` taken by different contributors.<br/><br/>
+This is the official repository of academic materials for `Software Engineering - Batch 11 (2021)`, College of Computer Science and Information Technology, Karary University, it containing files (`docx`,`pptx`,`pdf`,`zip`, and others) for the `sheets`, `papers`, `lectures`, `references` and `notes` taken by different contributors.<br/><br/>
 [Visit Site ↗️](https://eliasfaisal.github.io/FilesRepo/)
 
 ### Related Sites
