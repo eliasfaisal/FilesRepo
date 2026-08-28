@@ -233,7 +233,7 @@ function parseContent() {
         $(".count").innerHTML = "1 File";
     }
     $("#files-conainer").innerHTML = out;
-	$("#search-input").placeholder = "Search \"${sub}\"...";
+	$("#search-input").placeholder = `Search "${sub}"...`;
     for(let ff of fetchStack){
         fetchSize(ff[1], ff[0]);
     }
